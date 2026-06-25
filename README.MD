@@ -1,30 +1,87 @@
-This is a code cryptographer, Upon startup, the following menu will appear:
-    print("Main Menu")
-    print("1. Decrypt Text")
-    print("2. Encrypt Text")
-    print("3. Code Creator")
-    print("9. Exit Program")
+# 🔐 Cryptergrapher
 
-After completing, for example, encryption, you will be thrown back into this menu. 
-To close this program, press the number "9", next Enter.
+[![Language](https://shields.io)](https://python.org)
+[![License](https://shields.io)](LICENSE)
 
-If you absolutely must include the word and shifts in the code, so you don't have to write them after running the script, change these lines:
-For Decryptor:
-Line 15 encrypted_message = input("Encrypted word: ")
-Correct to encrypted_message = "Word"
-Line 17: key = (input("Shift: "))
-Correct to: key = "Shift digit"
+Простая и удобная консольная утилита на Python для шифрования и дешифрования текста. Программа использует классические алгоритмы сдвига для защиты вашей текстовой информации.
 
-For Encryptor:
-Line 35: message = input("Original word: ").lower()
-Correct to: message = "Word ".lower()
-Line 37: key = int(input("Shift: "))
-Correct to: key = "Digits"
+---
 
-The menu was created using elif, and the tab looks like this:
-if choice == "1":
-print("You selected: Decryptor")
-The code goes on...
+## 🚀 Функционал
 
-Creator: Fassy-dev (or Fassydev)
-Github: https://github.com/fassy-dev
+- **Зашифровать текст** — превращает исходный текст в шифротекст по указанному сдвигу (ключу).
+- **Расшифровать текст** — восстанавливает исходный текст из зашифрованного при помощи ключа.
+- **Интерактивное меню** — удобная навигация в консоли с защитой от случайного закрытия.
+
+---
+
+## 🛠️ Главное меню
+
+При запуске программы вас встретит следующее консольное меню:
+
+```text
+Main Menu
+1. Decrypt Text
+2. Encrypt Text
+3. Code Creator
+9. Exit Program
+```
+
+*Для выхода из программы введите цифру `9` и нажмите `Enter`.*
+
+---
+
+## 📦 Инструкция по установке и запуску
+
+1. **Клонируйте репозиторий:**
+   ```bash
+   git clone https://github.com
+   ```
+2. **Перейдите в папку с проектом:**
+   ```bash
+   cd criptergrapher
+   ```
+3. **Запустите скрипт:**
+   ```bash
+   python crypter.py
+   ```
+   *(Убедитесь, что имя файла совпадает с вашим главным скриптом)*
+
+---
+
+## 💡 Лайфхак: Автоматизация ввода (Hardcode)
+
+Если вы хотите протестировать код без постоянного ручного ввода слов и ключей в консоли, вы можете временно изменить следующие строки в коде:
+
+### Для Дешифратора (Decryptor):
+* **Строка 15:** забавьте ручной ввод на статичное слово:
+  ```python
+  encrypted_message = "ВашеЗашифрованноеСлово"
+  ```
+* **Строка 17:** укажите фиксированный шаг (обязательно числом):
+  ```python
+  key = 3 
+  ```
+
+### Для Шифратора (Encryptor):
+* **Строка 35:** замените ввод на нужное слово:
+  ```python
+  message = "ВашеСлово".lower()
+  ```
+* **Строка 37:** укажите фиксированный шаг шифрования:
+  ```python
+  key = 3
+  ```
+
+---
+
+## 📄 Лицензия
+
+Этот проект распространяется под лицензией **MIT**. Подробнее см. в файле [LICENSE](LICENSE).
+
+---
+
+## 👤 Автор
+
+- **Разработчик:** Fassy-dev (Fassydev)
+- **GitHub:** [@fassy-dev](https://github.com)
